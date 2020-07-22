@@ -12,14 +12,8 @@ import java.sql.*;
  * @author vilal
  */
 public class ModuloConexao {
-
-    /**
-     *
-     * @return
-     */
     public static Connection conector(){
-        java.sql.Connection conexao;
-        conexao = null;
+        java.sql.Connection conexao = null;
         String driver = "com.mysql.jdbc.Driver";
         String url = "jdbc:mysql://localhost:3306/dbProjetoLpoo";
         String user ="root";
@@ -28,8 +22,7 @@ public class ModuloConexao {
             Class.forName(driver);
             conexao = DriverManager.getConnection(url, user, password);
             return conexao;
-        } catch (ClassNotFoundException | SQLException e){
+        } catch (Exception e){
             return null;
-        }
     }
 }
