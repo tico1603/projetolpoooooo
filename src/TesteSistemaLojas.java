@@ -9,7 +9,7 @@ public class TesteSistemaLojas
     PreparedStatement pst = null;
     ResultSet rs = null;
     
-  public void main(String[] args)
+  public static void main(String[] args)
   {
    Janela janela = new Janela("Sistema de Lojas");
    conexao = ModuloConexao.conector();
