@@ -17,7 +17,7 @@ import java.util.logging.Logger;
  */
 public class ModuloConexao {
 
-    private static Connection conexao;
+    /*private static Connection conexao;
 
     public static Connection getConexao() {
         if (conexao == null){
@@ -30,7 +30,16 @@ public class ModuloConexao {
         }
             
         return conexao;
-    }
+    }*/
+        public Connection conectar(){
+            try{
+            
+                return DriverManager.getConnection("jdbc:mysql://localhost:3308/?user=root","root","");
+            }catch (SQLException e){
+                throw new RuntimeException();
+            }
+        
+        }
     
     
     
