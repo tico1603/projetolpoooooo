@@ -1,4 +1,4 @@
-public class TesteSistemaLojas
+public class TesteSistemaLojas1
 {
   public static void main(String[] Args)
   {
